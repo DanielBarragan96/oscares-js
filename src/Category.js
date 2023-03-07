@@ -1,10 +1,14 @@
 import { useState } from "react";
 
 function Category({ title, nominees }) {
-  let [selectedOption, setSelectedOption] = useState("");
+  let [selectedOption, setSelectedOption] = useState(
+    localStorage.getItem(title) ?? ""
+  );
 
   function handleOptionChange(changeEvent) {
-    setSelectedOption(changeEvent.target.value);
+    let selection = changeEvent.target.value;
+    setSelectedOption(selection);
+    localStorage.setItem(title, selection);
   }
   return (
     <div className="Category">
