@@ -1,11 +1,11 @@
-let selectedOption = "";
-
-function handleOptionChange(changeEvent) {
-  selectedOption = changeEvent.target.value;
-  console.log(selectedOption);
-}
+import { useState } from "react";
 
 function Category({ title, nominees }) {
+  let [selectedOption, setSelectedOption] = useState("");
+
+  function handleOptionChange(changeEvent) {
+    setSelectedOption(changeEvent.target.value);
+  }
   return (
     <div className="Category">
       <h1>{title}</h1>
@@ -15,7 +15,7 @@ function Category({ title, nominees }) {
             <input
               type="radio"
               value={nominee}
-              checked={false}
+              checked={selectedOption === nominee}
               onChange={handleOptionChange}
             />
             {nominee}
