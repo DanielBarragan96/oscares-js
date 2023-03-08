@@ -48,9 +48,12 @@ function App() {
           title={nomination.title}
           nominees={nomination.nominees}
           key={i}
+          submitted={submitted}
         />
       ))}
-      <button onClick={submitVote}>Submit</button>
+      <button onClick={submitVote} disabled={submitted}>
+        Submit
+      </button>
       <h5> </h5>
     </div>
   );

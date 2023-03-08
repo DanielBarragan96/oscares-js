@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-function Category({ title, nominees }) {
+function Category({ title, nominees, submitted }) {
   let [selectedOption, setSelectedOption] = useState(
     localStorage.getItem(title) ?? ""
   );
 
   function handleOptionChange(changeEvent) {
+    if (submitted) return;
     let selection = changeEvent.target.value;
     setSelectedOption(selection);
     localStorage.setItem(title, selection);
