@@ -28,3 +28,8 @@ label {
 .nominee {
   padding: 10px;
 }
+
+img {
+  height: 200px;
+  padding-top: 50px;
+}
