@@ -12,9 +12,9 @@ function Category({ title, nominees }) {
   }
   return (
     <div className="Category">
-      <h1>{title}</h1>
+      <h3>{title}</h3>
       {nominees.map((nominee, i) => (
-        <div key={i}>
+        <div key={i} className="nominee">
           <label>
             <input
               type="radio"
