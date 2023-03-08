@@ -51,6 +51,7 @@ function App() {
         />
       ))}
       <button onClick={submitVote}>Submit</button>
+      <h5> </h5>
     </div>
   );
 }
