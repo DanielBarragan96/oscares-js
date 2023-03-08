@@ -18,6 +18,13 @@ function App() {
     window.location.reload(true);
   }
 
+  function unsubmitVote() {
+    setSubmitted(false);
+    localStorage.removeItem("submitted");
+    window.scrollTo(0, 0);
+    window.location.reload(true);
+  }
+
   return (
     <div className="App">
       <img src={oscar} alt="oscar" />
@@ -39,6 +46,7 @@ function App() {
             </tbody>
           </table>
           <h4>{localStorage.getItem("submitted")}</h4>
+          <button onClick={unsubmitVote}>Unsubmit</button>
         </>
       ) : (
         <div></div>
