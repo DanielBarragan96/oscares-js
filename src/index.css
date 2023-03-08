@@ -16,10 +16,15 @@ body {
   background-color: #023047;
 }
 
-h1 {
+h1,
+h3 {
   color: #ffb703;
 }
 
 label {
   color: #fefae0;
+}
+
+.nominee {
+  padding: 10px;
 }
