@@ -37,10 +37,18 @@ function App() {
     <div className="App">
       <img src={oscar} alt="oscar" />
       <h1>95th Academy Awards</h1>
-      <label>Congratilations, you guessed:</label>
-      <h1>
-        {goodGuesses} /{nominations.length}
-      </h1>
+
+      {Object.keys(winners).length > 1 ? (
+        <>
+          <label>Congratilations, you guessed:</label>
+          <h1>
+            {goodGuesses} /{nominations.length}
+          </h1>
+        </>
+      ) : (
+        <></>
+      )}
+
       {submitted ? (
         <>
           <table key={submitted}>
