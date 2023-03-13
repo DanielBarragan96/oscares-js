@@ -47,7 +47,7 @@ function App() {
       <img src={oscar} alt="oscar" />
       <h1>95th Academy Awards</h1>
 
-      {Object.keys(winners).length > 1 ? (
+      {submitted && Object.keys(winners).length > 1 ? (
         <>
           <Confetti width={width} height={height} />
           <label>Congratilations, you guessed:</label>
