@@ -3,6 +3,7 @@ import Category from "./Category";
 import oscar from "./oscar.png";
 
 import nominations from "./nominations.json";
+import winners from "./winners.json";
 import { useState } from "react";
 
 function App() {
@@ -25,6 +26,13 @@ function App() {
     window.location.reload(true);
   }
 
+  let goodGuesses = 0;
+  try {
+    Object.keys(winners).forEach((key) => {
+      if (winners[key] === localStorage.getItem(key)) goodGuesses++;
+    });
+  } catch (Error) {}
+
   return (
     <div className="App">
       <img src={oscar} alt="oscar" />
@@ -39,12 +47,34 @@ function App() {
                     <label>{nomination.title}</label>
                   </td>
                   <td>
-                    <label>{localStorage.getItem(nomination.title)}</label>
+                    <label
+                      id={nomination.title}
+                      className={
+                        !winners[nomination.title]
+                          ? ""
+                          : winners[nomination.title] ===
+                            localStorage.getItem(nomination.title)
+                          ? "goodGuess"
+                          : "badGuess"
+                      }
+                    >
+                      {localStorage.getItem(nomination.title)}
+                    </label>
+                    <label className="winner">
+                      {winners[nomination.title] &&
+                      winners[nomination.title] !==
+                        localStorage.getItem(nomination.title)
+                        ? " " + winners[nomination.title]
+                        : " "}
+                    </label>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
+          <h1>
+            {goodGuesses} /{nominations.length}
+          </h1>
           <h4>{localStorage.getItem("submitted")}</h4>
           <button onClick={unsubmitVote}>Unsubmit</button>
         </>
