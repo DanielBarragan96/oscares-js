@@ -4,13 +4,17 @@ import oscar from "./oscar.png";
 
 import nominations from "./nominations.json";
 import winners from "./winners.json";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Confetti from "react-confetti";
 
 function App() {
   let width = window.screen.width;
-  var height = window.screen.height;
+  var [height, setHeigth] = useState(window.screen.height);
+
+  useEffect(() => {
+    setHeigth(document.documentElement.scrollHeight);
+  }, []);
 
   let [submitted, setSubmitted] = useState(
     localStorage.getItem("submitted") !== null
