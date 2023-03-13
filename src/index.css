@@ -61,3 +61,16 @@ td {
   margin-left: auto;
   margin-right: auto;
 }
+
+.goodGuess {
+  color: green;
+}
+
+.badGuess {
+  color: red;
+  text-decoration: line-through;
+}
+
+.winner {
+  color: #ffb703;
+}
