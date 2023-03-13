@@ -10,7 +10,7 @@ import Confetti from "react-confetti";
 
 function App() {
   let width = window.screen.width;
-  var height = document.documentElement.scrollHeight;
+  var height = window.screen.height;
 
   let [submitted, setSubmitted] = useState(
     localStorage.getItem("submitted") !== null
