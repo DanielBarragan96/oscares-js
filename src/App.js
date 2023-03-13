@@ -6,7 +6,21 @@ import nominations from "./nominations.json";
 import winners from "./winners.json";
 import { useState } from "react";
 
+import Confetti from "react-confetti";
+
 function App() {
+  let width = window.screen.width;
+  var body = document.body,
+    html = document.documentElement;
+
+  var height = Math.max(
+    body.scrollHeight,
+    body.offsetHeight,
+    html.clientHeight,
+    html.scrollHeight,
+    html.offsetHeight
+  );
+
   let [submitted, setSubmitted] = useState(
     localStorage.getItem("submitted") !== null
   );
@@ -40,6 +54,7 @@ function App() {
 
       {Object.keys(winners).length > 1 ? (
         <>
+          <Confetti width={width} height={height} />
           <label>Congratilations, you guessed:</label>
           <h1>
             {goodGuesses} /{nominations.length}
