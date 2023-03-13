@@ -10,16 +10,7 @@ import Confetti from "react-confetti";
 
 function App() {
   let width = window.screen.width;
-  var body = document.body,
-    html = document.documentElement;
-
-  var height = Math.max(
-    body.scrollHeight,
-    body.offsetHeight,
-    html.clientHeight,
-    html.scrollHeight,
-    html.offsetHeight
-  );
+  var height = document.documentElement.scrollHeight;
 
   let [submitted, setSubmitted] = useState(
     localStorage.getItem("submitted") !== null
