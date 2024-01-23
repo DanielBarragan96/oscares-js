@@ -1,290 +1,290 @@
 import json
 
 input_str = """ACTOR IN A LEADING ROLE
-AUSTIN BUTLER
-Elvis
-COLIN FARRELL
-The Banshees of Inisherin
-BRENDAN FRASER
-The Whale
-PAUL MESCAL
-Aftersun
-BILL NIGHY
-Living
+BRADLEY COOPER
+Maestro
+COLMAN DOMINGO
+Rustin
+PAUL GIAMATTI
+The Holdovers
+CILLIAN MURPHY
+Oppenheimer
+JEFFREY WRIGHT
+American Fiction
 
 ACTOR IN A SUPPORTING ROLE
-BRENDAN GLEESON
-The Banshees of Inisherin
-BRIAN TYREE HENRY
-Causeway
-JUDD HIRSCH
-The Fabelmans
-BARRY KEOGHAN
-The Banshees of Inisherin
-KE HUY QUAN
-Everything Everywhere All at Once
+STERLING K. BROWN
+American Fiction
+ROBERT DE NIRO
+Killers of the Flower Moon
+ROBERT DOWNEY JR.
+Oppenheimer
+RYAN GOSLING
+Barbie
+MARK RUFFALO
+Poor Things
 
 ACTRESS IN A LEADING ROLE
-CATE BLANCHETT
-Tár
-ANA DE ARMAS
-Blonde
-ANDREA RISEBOROUGH
-To Leslie
-MICHELLE WILLIAMS
-The Fabelmans
-MICHELLE YEOH
-Everything Everywhere All at Once
+ANNETTE BENING
+Nyad
+LILY GLADSTONE
+Killers of the Flower Moon
+SANDRA HÜLLER
+Anatomy of a Fall
+CAREY MULLIGAN
+Maestro
+EMMA STONE
+Poor Things
 
 ACTRESS IN A SUPPORTING ROLE
-ANGELA BASSETT
-Black Panther: Wakanda Forever
-HONG CHAU
-The Whale
-KERRY CONDON
-The Banshees of Inisherin
-JAMIE LEE CURTIS
-Everything Everywhere All at Once
-STEPHANIE HSU
-Everything Everywhere All at Once
+NOMINEES
+EMILY BLUNT
+Oppenheimer
+DANIELLE BROOKS
+The Color Purple
+AMERICA FERRERA
+Barbie
+JODIE FOSTER
+Nyad
+DA'VINE JOY RANDOLPH
+The Holdovers
 
 ANIMATED FEATURE FILM
-GUILLERMO DEL TORO'S PINOCCHIO
-Guillermo del Toro, Mark Gustafson, Gary Ungar and Alex Bulkley
-MARCEL THE SHELL WITH SHOES ON
-Dean Fleischer Camp, Elisabeth Holm, Andrew Goldman, Caroline Kaplan and Paul Mezey
-PUSS IN BOOTS: THE LAST WISH
-Joel Crawford and Mark Swift
-THE SEA BEAST
-Chris Williams and Jed Schlanger
-TURNING RED
-Domee Shi and Lindsey Collins
+THE BOY AND THE HERON
+Hayao Miyazaki and Toshio Suzuki
+ELEMENTAL
+Peter Sohn and Denise Ream
+NIMONA
+Nick Bruno, Troy Quane, Karen Ryan and Julie Zackary
+ROBOT DREAMS
+Pablo Berger, Ibon Cormenzana, Ignasi Estapé and Sandra Tapia Díaz
+SPIDER-MAN: ACROSS THE SPIDER-VERSE
+Kemp Powers, Justin K. Thompson, Phil Lord, Christopher Miller and Amy Pascal
 
 CINEMATOGRAPHY
-ALL QUIET ON THE WESTERN FRONT
-James Friend
-BARDO, FALSE CHRONICLE OF A HANDFUL OF TRUTHS
-Darius Khondji
-ELVIS
-Mandy Walker
-EMPIRE OF LIGHT
-Roger Deakins
-TÁR
-Florian Hoffmeister
+EL CONDE
+Edward Lachman
+KILLERS OF THE FLOWER MOON
+Rodrigo Prieto
+MAESTRO
+Matthew Libatique
+OPPENHEIMER
+Hoyte van Hoytema
+POOR THINGS
+Robbie Ryan
 
 COSTUME DESIGN
-BABYLON
-Mary Zophres
-BLACK PANTHER: WAKANDA FOREVER
-Ruth Carter
-ELVIS
-Catherine Martin
-EVERYTHING EVERYWHERE ALL AT ONCE
-Shirley Kurata
-MRS. HARRIS GOES TO PARIS
-Jenny Beavan
+BARBIE
+Jacqueline Durran
+KILLERS OF THE FLOWER MOON
+Jacqueline West
+NAPOLEON
+Janty Yates and Dave Crossman
+OPPENHEIMER
+Ellen Mirojnick
+POOR THINGS
+Holly Waddington
 
 DIRECTING
-THE BANSHEES OF INISHERIN
-Martin McDonagh
-EVERYTHING EVERYWHERE ALL AT ONCE
-Daniel Kwan and Daniel Scheinert
-THE FABELMANS
-Steven Spielberg
-TÁR
-Todd Field
-TRIANGLE OF SADNESS
-Ruben Östlund
+ANATOMY OF A FALL
+Justine Triet
+KILLERS OF THE FLOWER MOON
+Martin Scorsese
+OPPENHEIMER
+Christopher Nolan
+POOR THINGS
+Yorgos Lanthimos
+THE ZONE OF INTEREST
+Jonathan Glazer
 
 DOCUMENTARY FEATURE FILM
-ALL THAT BREATHES
-Shaunak Sen, Aman Mann and Teddy Leifer
-ALL THE BEAUTY AND THE BLOODSHED
-Laura Poitras, Howard Gertler, John Lyons, Nan Goldin and Yoni Golijov
-FIRE OF LOVE
-Sara Dosa, Shane Boris and Ina Fichman
-A HOUSE MADE OF SPLINTERS
-Simon Lereng Wilmont and Monica Hellström
-NAVALNY
-Daniel Roher, Odessa Rae, Diane Becker, Melanie Miller and Shane Boris
+BOBI WINE: THE PEOPLE'S PRESIDENT
+Moses Bwayo, Christopher Sharp and John Battsek
+THE ETERNAL MEMORY
+FOUR DAUGHTERS
+Kaouther Ben Hania and Nadim Cheikhrouha
+TO KILL A TIGER
+Nisha Pahuja, Cornelia Principe and David Oppenheim
+20 DAYS IN MARIUPOL
+Mstyslav Chernov, Michelle Mizner and Raney Aronson-Rath
 
 DOCUMENTARY SHORT FILM
-THE ELEPHANT WHISPERERS
-Kartiki Gonsalves and Guneet Monga
-HAULOUT
-Evgenia Arbugaeva and Maxim Arbugaev
-HOW DO YOU MEASURE A YEAR?
-Jay Rosenblatt
-THE MARTHA MITCHELL EFFECT
-Anne Alvergue and Beth Levison
-STRANGER AT THE GATE
-Joshua Seftel and Conall Jones
+THE ABCS OF BOOK BANNING
+Sheila Nevins and Trish Adlesic
+THE BARBER OF LITTLE ROCK
+John Hoffman and Christine Turner
+ISLAND IN BETWEEN
+S. Leo Chiang and Jean Tsien
+THE LAST REPAIR SHOP
+Ben Proudfoot and Kris Bowers
+NǍI NAI & WÀI PÓ
+Sean Wang and Sam Davis
 
 FILM EDITING
-THE BANSHEES OF INISHERIN
-Mikkel E.G. Nielsen
-ELVIS
-Matt Villa and Jonathan Redmond
-EVERYTHING EVERYWHERE ALL AT ONCE
-Paul Rogers
-TÁR
-Monika Willi
-TOP GUN: MAVERICK
-Eddie Hamilton
+ANATOMY OF A FALL
+Laurent Sénéchal
+THE HOLDOVERS
+Kevin Tent
+KILLERS OF THE FLOWER MOON
+Thelma Schoonmaker
+OPPENHEIMER
+Jennifer Lame
+POOR THINGS
+Yorgos Mavropsaridis
 
 INTERNATIONAL FEATURE FILM
-ALL QUIET ON THE WESTERN FRONT
+IO CAPITANO
+Italy
+PERFECT DAYS
+Japan
+SOCIETY OF THE SNOW
+Spain
+THE TEACHERS' LOUNGE
 Germany
-ARGENTINA, 1985
-Argentina
-CLOSE
-Belgium
-EO
-Poland
-THE QUIET GIRL
-Ireland
+THE ZONE OF INTEREST
+United Kingdom
 
 MAKEUP AND HAIRSTYLING
-ALL QUIET ON THE WESTERN FRONT
-Heike Merker and Linda Eisenhamerová
-THE BATMAN
-Naomi Donne, Mike Marino and Mike Fontaine
-BLACK PANTHER: WAKANDA FOREVER
-Camille Friend and Joel Harlow
-ELVIS
-Mark Coulier, Jason Baird and Aldo Signoretti
-THE WHALE
-Adrien Morot, Judy Chin and Annemarie Bradley
+GOLDA
+Karen Hartley Thomas, Suzi Battersby and Ashra Kelly-Blue
+MAESTRO
+Kazu Hiro, Kay Georgiou and Lori McCoy-Bell
+OPPENHEIMER
+Luisa Abel
+POOR THINGS
+Nadia Stacey, Mark Coulier and Josh Weston
+SOCIETY OF THE SNOW
+Ana López-Puigcerver, David Martí and Montse Ribé
 
 MUSIC (ORIGINAL SCORE)
-ALL QUIET ON THE WESTERN FRONT
-Volker Bertelmann
-BABYLON
-Justin Hurwitz
-THE BANSHEES OF INISHERIN
-Carter Burwell
-EVERYTHING EVERYWHERE ALL AT ONCE
-Son Lux
-THE FABELMANS
+AMERICAN FICTION
+Laura Karpman
+INDIANA JONES AND THE DIAL OF DESTINY
 John Williams
+KILLERS OF THE FLOWER MOON
+Robbie Robertson
+OPPENHEIMER
+Ludwig Göransson
+POOR THINGS
+Jerskin Fendrix
 
 MUSIC (ORIGINAL SONG)
-APPLAUSE
-from Tell It like a Woman; Music and Lyric by Diane Warren
-HOLD MY HAND
-from Top Gun: Maverick; Music and Lyric by Lady Gaga and BloodPop
-LIFT ME UP
-from Black Panther: Wakanda Forever; Music by Tems, Rihanna, Ryan Coogler and Ludwig Goransson; Lyric by Tems and Ryan Coogler
-NAATU NAATU
-from RRR; Music by M.M. Keeravaani; Lyric by Chandrabose
-THIS IS A LIFE
-from Everything Everywhere All at Once; Music by Ryan Lott, David Byrne and Mitski; Lyric by Ryan Lott and David Byrne
+THE FIRE INSIDE
+from Flamin' Hot; Music and Lyric by Diane Warren
+I'M JUST KEN
+from Barbie; Music and Lyric by Mark Ronson and Andrew Wyatt
+IT NEVER WENT AWAY
+from American Symphony; Music and Lyric by Jon Batiste and Dan Wilson
+WAHZHAZHE (A SONG FOR MY PEOPLE)
+from Killers of the Flower Moon; Music and Lyric by Scott George
+WHAT WAS I MADE FOR?
+from Barbie; Music and Lyric by Billie Eilish and Finneas O'Connell
 
 BEST PICTURE
-ALL QUIET ON THE WESTERN FRONT
-Malte Grunert, Producer
-AVATAR: THE WAY OF WATER
-James Cameron and Jon Landau, Producers
-THE BANSHEES OF INISHERIN
-Graham Broadbent, Pete Czernin and Martin McDonagh, Producers
-ELVIS
-Baz Luhrmann, Catherine Martin, Gail Berman, Patrick McCormick and Schuyler Weiss, Producers
-EVERYTHING EVERYWHERE ALL AT ONCE
-Daniel Kwan, Daniel Scheinert and Jonathan Wang, Producers
-THE FABELMANS
-Kristie Macosko Krieger, Steven Spielberg and Tony Kushner, Producers
-TÁR
-Todd Field, Alexandra Milchan and Scott Lambert, Producers
-TOP GUN: MAVERICK
-Tom Cruise, Christopher McQuarrie, David Ellison and Jerry Bruckheimer, Producers
-TRIANGLE OF SADNESS
-Erik Hemmendorff and Philippe Bober, Producers
-WOMEN TALKING
-Dede Gardner, Jeremy Kleiner and Frances McDormand, Producers
+AMERICAN FICTION
+Ben LeClair, Nikos Karamigios, Cord Jefferson and Jermaine Johnson, Producers
+ANATOMY OF A FALL
+Marie-Ange Luciani and David Thion, Producers
+BARBIE
+David Heyman, Margot Robbie, Tom Ackerley and Robbie Brenner, Producers
+THE HOLDOVERS
+Mark Johnson, Producer
+KILLERS OF THE FLOWER MOON
+Dan Friedkin, Bradley Thomas, Martin Scorsese and Daniel Lupi, Producers
+MAESTRO
+Bradley Cooper, Steven Spielberg, Fred Berner, Amy Durning and Kristie Macosko Krieger, Producers
+OPPENHEIMER
+Emma Thomas, Charles Roven and Christopher Nolan, Producers
+PAST LIVES
+David Hinojosa, Christine Vachon and Pamela Koffler, Producers
+POOR THINGS
+Ed Guiney, Andrew Lowe, Yorgos Lanthimos and Emma Stone, Producers
+THE ZONE OF INTEREST
+James Wilson, Producer
 
 PRODUCTION DESIGN
-ALL QUIET ON THE WESTERN FRONT
-Production Design: Christian M. Goldbeck; Set Decoration: Ernestine Hipper
-AVATAR: THE WAY OF WATER
-Production Design: Dylan Cole and Ben Procter; Set Decoration: Vanessa Cole
-BABYLON
-Production Design: Florencia Martin; Set Decoration: Anthony Carlino
-ELVIS
-Production Design: Catherine Martin and Karen Murphy; Set Decoration: Bev Dunn
-THE FABELMANS
-Production Design: Rick Carter; Set Decoration: Karen O'Hara
+BARBIE
+Production Design: Sarah Greenwood; Set Decoration: Katie Spencer
+KILLERS OF THE FLOWER MOON
+Production Design: Jack Fisk; Set Decoration: Adam Willis
+NAPOLEON
+Production Design: Arthur Max; Set Decoration: Elli Griff
+OPPENHEIMER
+Production Design: Ruth De Jong; Set Decoration: Claire Kaufman
+POOR THINGS
+Production Design: James Price and Shona Heath; Set Decoration: Zsuzsa Mihalek
 
-SHORT FILM (ANIMATED)
-THE BOY, THE MOLE, THE FOX AND THE HORSE
-Charlie Mackesy and Matthew Freud
-THE FLYING SAILOR
-Amanda Forbis and Wendy Tilby
-ICE MERCHANTS
-João Gonzalez and Bruno Caetano
-MY YEAR OF DICKS
-Sara Gunnarsdóttir and Pamela Ribon
-AN OSTRICH TOLD ME THE WORLD IS FAKE AND I THINK I BELIEVE IT
-Lachlan Pendragon
+ANIMATED SHORT FILM
+LETTER TO A PIG
+Tal Kantor and Amit R. Gicelter
+NINETY-FIVE SENSES
+Jerusha Hess and Jared Hess
+OUR UNIFORM
+Yegane Moghaddam
+PACHYDERME
+Stéphanie Clément and Marc Rius
+WAR IS OVER! INSPIRED BY THE MUSIC OF JOHN & YOKO
+Dave Mullins and Brad Booker
 
-SHORT FILM (LIVE ACTION)
-AN IRISH GOODBYE
-Tom Berkeley and Ross White
-IVALU
-Anders Walter and Rebecca Pruzan
-LE PUPILLE
-Alice Rohrwacher and Alfonso Cuarón
-NIGHT RIDE
-Eirik Tveiten and Gaute Lid Larssen
-THE RED SUITCASE
-Cyrus Neshvad
+LIVE ACTION SHORT FILM
+THE AFTER
+Misan Harriman and Nicky Bentham
+INVINCIBLE
+Vincent René-Lortie and Samuel Caron
+KNIGHT OF FORTUNE
+Lasse Lyskjær Noer and Christian Norlyk
+RED, WHITE AND BLUE
+Nazrin Choudhury and Sara McFarlane
+THE WONDERFUL STORY OF HENRY SUGAR
+Wes Anderson and Steven Rales
 
 SOUND
-ALL QUIET ON THE WESTERN FRONT
-Viktor Prášil, Frank Kruse, Markus Stemler, Lars Ginzel and Stefan Korte
-AVATAR: THE WAY OF WATER
-Julian Howarth, Gwendolyn Yates Whittle, Dick Bernstein, Christopher Boyes, Gary Summers and Michael Hedges
-THE BATMAN
-Stuart Wilson, William Files, Douglas Murray and Andy Nelson
-ELVIS
-David Lee, Wayne Pashley, Andy Nelson and Michael Keller
-TOP GUN: MAVERICK
-Mark Weingarten, James H. Mather, Al Nelson, Chris Burdon and Mark Taylor
+THE CREATOR
+Ian Voigt, Erik Aadahl, Ethan Van der Ryn, Tom Ozanich and Dean Zupancic
+MAESTRO
+Steven A. Morrow, Richard King, Jason Ruder, Tom Ozanich and Dean Zupancic
+MISSION: IMPOSSIBLE - DEAD RECKONING PART ONE
+Chris Munro, James H. Mather, Chris Burdon and Mark Taylor
+OPPENHEIMER
+Willie Burton, Richard King, Gary A. Rizzo and Kevin O'Connell
+THE ZONE OF INTEREST
+Tarn Willers and Johnnie Burn
 
 VISUAL EFFECTS
-ALL QUIET ON THE WESTERN FRONT
-Frank Petzold, Viktor Müller, Markus Frank and Kamil Jafar
-AVATAR: THE WAY OF WATER
-Joe Letteri, Richard Baneham, Eric Saindon and Daniel Barrett
-THE BATMAN
-Dan Lemmon, Russell Earl, Anders Langlands and Dominic Tuohy
-BLACK PANTHER: WAKANDA FOREVER
-Geoffrey Baumann, Craig Hammack, R. Christopher White and Dan Sudick
-TOP GUN: MAVERICK
-Ryan Tudhope, Seth Hill, Bryan Litson and Scott R. Fisher
+THE CREATOR
+Jay Cooper, Ian Comley, Andrew Roberts and Neil Corbould
+GODZILLA MINUS ONE
+Takashi Yamazaki, Kiyoko Shibuya, Masaki Takahashi and Tatsuji Nojima
+GUARDIANS OF THE GALAXY VOL. 3
+Stephane Ceretti, Alexis Wajsbrot, Guy Williams and Theo Bialek
+MISSION: IMPOSSIBLE - DEAD RECKONING PART ONE
+Alex Wuttke, Simone Coco, Jeff Sutherland and Neil Corbould
+NAPOLEON
+Charley Henley, Luc-Ewen Martin-Fenouillet, Simone Coco and Neil Corbould
 
 WRITING (ADAPTED SCREENPLAY)
-ALL QUIET ON THE WESTERN FRONT
-Screenplay - Edward Berger, Lesley Paterson & Ian Stokell
-GLASS ONION: A KNIVES OUT MYSTERY
-Written by Rian Johnson
-LIVING
-Written by Kazuo Ishiguro
-TOP GUN: MAVERICK
-Screenplay by Ehren Kruger and Eric Warren Singer and Christopher McQuarrie; Story by Peter Craig and Justin Marks
-WOMEN TALKING
-Screenplay by Sarah Polley
+AMERICAN FICTION
+Written for the screen by Cord Jefferson
+BARBIE
+Written by Greta Gerwig & Noah Baumbach
+OPPENHEIMER
+Written for the screen by Christopher Nolan
+POOR THINGS
+Screenplay by Tony McNamara
+THE ZONE OF INTEREST
+Written by Jonathan Glazer
 
 WRITING (ORIGINAL SCREENPLAY)
-THE BANSHEES OF INISHERIN
-Written by Martin McDonagh
-EVERYTHING EVERYWHERE ALL AT ONCE
-Written by Daniel Kwan & Daniel Scheinert
-THE FABELMANS
-Written by Steven Spielberg & Tony Kushner
-TÁR
-Written by Todd Field
-TRIANGLE OF SADNESS
-Written by Ruben Östlund
+ANATOMY OF A FALL
+Screenplay - Justine Triet and Arthur Harari
+THE HOLDOVERS
+Written by David Hemingson
+MAESTRO
+Written by Bradley Cooper & Josh Singer
+MAY DECEMBER
+Screenplay by Samy Burch; Story by Samy Burch & Alex Mechanik
+PAST LIVES
+Written by Celine Song
 """
 
 def parse_data(input_str):
