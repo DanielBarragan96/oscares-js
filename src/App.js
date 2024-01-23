@@ -11,6 +11,8 @@ import Confetti from "react-confetti";
 function App() {
   let width = window.screen.width;
   var [height, setHeigth] = useState(window.screen.height);
+  let currYear = parseInt(new Date().getFullYear());
+  let xAcademyAwards = currYear - 1928;
 
   useEffect(() => {
     setHeigth(document.documentElement.scrollHeight);
@@ -52,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <img src={oscar} alt="oscar" />
-      <h1>95th Academy Awards</h1>
+      <h1>{xAcademyAwards}th Academy Awards</h1>
 
       {submitted && Object.keys(winners).length > 1 ? (
         <>
