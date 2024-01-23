@@ -14,6 +14,13 @@ function App() {
 
   useEffect(() => {
     setHeigth(document.documentElement.scrollHeight);
+    let currYear = parseInt(new Date().getFullYear());
+    let submittedDate = new Date(Date.parse(localStorage.getItem("submitted")));
+    let submittedYear = parseInt(submittedDate.getFullYear());
+    if (currYear - submittedYear) {
+      localStorage.clear();
+      window.location.reload(true);
+    }
   }, []);
 
   let [submitted, setSubmitted] = useState(
