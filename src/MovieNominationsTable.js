@@ -37,7 +37,9 @@ function MovieNominationsTable({ movieNominations }) {
           ))}
         </tbody>
       </table>
-      <h1>Total watched: {0}</h1>
+      <h1>
+        Total watched: {Object.keys(watched).length} / {movieNominations.length}
+      </h1>
       <h5> </h5>
     </>
   );
