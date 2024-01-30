@@ -1,4 +1,13 @@
+import { useState } from "react";
+import MovieNominationsRow from "./MovieNominationsRow";
+
 function MovieNominationsTable({ movieNominations }) {
+  if (!localStorage.getItem("watched")) {
+    localStorage.setItem("watched", JSON.stringify({}));
+  }
+  var [watched, setWatched] = useState(
+    JSON.parse(localStorage.getItem("watched"))
+  );
   return (
     <>
       <table>
@@ -18,20 +27,13 @@ function MovieNominationsTable({ movieNominations }) {
             </th>
           </tr>
           {movieNominations.map((movie, i) => (
-            <tr key={movie}>
-              <th>
-                <label>{i + 1}</label>
-              </th>
-              <th>
-                <label>{movie[0]}</label>
-              </th>
-              <th>
-                <label>{movie[1]}</label>
-              </th>
-              <th>
-                <input type="checkbox" id="cbox1" value="first_checkbox" />
-              </th>
-            </tr>
+            <MovieNominationsRow
+              key={movie}
+              movie={movie}
+              i={i}
+              watched={watched}
+              setWatched={setWatched}
+            />
           ))}
         </tbody>
       </table>
