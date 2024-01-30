@@ -1,5 +1,6 @@
 import "./App.css";
 import Category from "./Category";
+import MovieNominationsTable from "./MovieNominationsTable";
 import oscar from "./oscar.png";
 
 import nominations from "./nominations.json";
@@ -13,6 +14,31 @@ function App() {
   var [height, setHeigth] = useState(window.screen.height);
   let currYear = parseInt(new Date().getFullYear());
   let xAcademyAwards = currYear - 1928;
+
+  let movieNominations = {};
+  let commasOrder = [
+    1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0,
+  ];
+  let index = 0;
+  for (let nomination of nominations) {
+    for (let movie of nomination.nominees) {
+      let currentMovie = movie
+        .toUpperCase()
+        .split(";")[0]
+        .replace(" FROM ", "");
+      currentMovie = currentMovie.split(",")[commasOrder[index]].trim();
+      if (!movieNominations[currentMovie]) {
+        movieNominations[currentMovie] = 0;
+      }
+      movieNominations[currentMovie] = movieNominations[currentMovie] + 1;
+    }
+    index++;
+  }
+
+  movieNominations = Object.keys(movieNominations)
+    .map((key) => [key, movieNominations[key]])
+    .sort()
+    .sort((a, b) => b[1] - a[1]);
 
   useEffect(() => {
     setHeigth(document.documentElement.scrollHeight);
@@ -121,6 +147,7 @@ function App() {
         Submit
       </button>
       <h5> </h5>
+      <MovieNominationsTable movieNominations={movieNominations} />
     </div>
   );
 }
