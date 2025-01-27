@@ -17,7 +17,7 @@ function App() {
 
   let movieNominations = {};
   let commasOrder = [
-    1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0,
+    1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
   ];
   let index = 0;
   for (let nomination of nominations) {
