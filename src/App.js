@@ -17,7 +17,7 @@ function App() {
 
   let movieNominations = {};
   let commasOrder = [
-    1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
   ];
   let index = 0;
   for (let nomination of nominations) {
@@ -52,7 +52,7 @@ function App() {
   }, []);
 
   let [submitted, setSubmitted] = useState(
-    localStorage.getItem("submitted") !== null
+    localStorage.getItem("submitted") !== null,
   );
 
   function submitVote() {
@@ -110,9 +110,9 @@ function App() {
                         !winners[nomination.title]
                           ? ""
                           : winners[nomination.title] ===
-                            localStorage.getItem(nomination.title)
-                          ? "goodGuess"
-                          : "badGuess"
+                              localStorage.getItem(nomination.title)
+                            ? "goodGuess"
+                            : "badGuess"
                       }
                     >
                       {localStorage.getItem(nomination.title)}
