@@ -73,7 +73,15 @@ function App() {
   let goodGuesses = 0;
   try {
     Object.keys(winners).forEach((key) => {
-      if (winners[key] === localStorage.getItem(key)) goodGuesses++;
+      if (
+        winners[key] &&
+        winners[key]
+          .split("&&&")
+          .map((w) => w.trim())
+          .includes(localStorage.getItem(key))
+      ) {
+        goodGuesses++;
+      }
     });
   } catch (Error) {}
 
@@ -109,8 +117,12 @@ function App() {
                       className={
                         !winners[nomination.title]
                           ? ""
-                          : winners[nomination.title] ===
-                              localStorage.getItem(nomination.title)
+                          : winners[nomination.title]
+                                .split("&&&")
+                                .map((w) => w.trim())
+                                .includes(
+                                  localStorage.getItem(nomination.title),
+                                )
                             ? "goodGuess"
                             : "badGuess"
                       }
@@ -121,7 +133,7 @@ function App() {
                       {winners[nomination.title] &&
                       winners[nomination.title] !==
                         localStorage.getItem(nomination.title)
-                        ? " " + winners[nomination.title]
+                        ? " " + winners[nomination.title].replace(/&&&/g, " & ")
                         : " "}
                     </label>
                   </td>
